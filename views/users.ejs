@@ -1,11 +1,11 @@
-<%- include('includes/head')%>
-
-  </head>
-  <body>
-    <h1>User page</h1>
-    <ul>
-      <li>User1</li>
-      <li>User 2</li>
-    </ul>
-<%- include('includes/foot')%>
-
+<%- include('includes/head') %>
+<h1>Users</h1>
+<% if (users.length > 0) { %>
+<ul>
+  <% users.forEach((user) => { %>
+  <li><%= user.name %></li>
+  <% }) %>
+</ul>
+<% } else { %>
+<h1>No Users Found!</h1>
+<% } %> <%- include('includes/foot') %>

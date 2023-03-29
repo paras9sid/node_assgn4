@@ -19,8 +19,8 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, "public")));
 
 //routes rendered
-app.use(homeRoute);
 app.use(usersRoute);
+app.use(homeRoute);
 
 //page 404 rendered
 app.use((req, res, next) => {
@@ -33,3 +33,24 @@ app.use((req, res, next) => {
 //server running
 app.listen(3000);
 console.log("server running success"); //to check server running
+
+// const express = require("express");
+// const bodyParser = require("body-parser");
+
+// const app = express();
+
+// const users = [];
+
+// app.set("view engine", "ejs");
+// app.set("views", "views");
+
+// app.use(bodyParser.urlencoded({ extended: false }));
+
+// app.get;
+
+// app.post("/add-user", (req, res, next) => {
+//   users.push({ name: req.body.username });
+//   res.redirect("/users");
+// });
+
+// app.listen(3000);
