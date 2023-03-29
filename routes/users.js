@@ -4,7 +4,10 @@ const router = express.Router();
 
 router.get("/users", (req, res, next) => {
   console.log("users page running");
-  res.send("user route");
+  res.render("users", {
+    pageTitle: "Users",
+    path: "/users",
+  });
 });
 
 module.exports = router;
